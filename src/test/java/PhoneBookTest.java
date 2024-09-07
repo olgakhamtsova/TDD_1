@@ -19,4 +19,13 @@ public class PhoneBookTest {
         int act = 1;
         assertEquals(exp, act);
     }
+    @Test
+    public void testFindByNumber() {
+        map = new HashMap<>();
+        map.put("55555555555", "Катя");
+        PhoneBook book = new PhoneBook(map);
+        String exp = book.findByNumber();
+        String act = "Катя";
+        assertEquals(exp, act);
+    }
 }

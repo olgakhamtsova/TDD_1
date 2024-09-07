@@ -22,4 +22,8 @@ public class PhoneBook {
         }
         return res;
     }
+
+    public String findByNumber(){
+        return null;
+    }
 }
