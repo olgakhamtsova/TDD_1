@@ -8,4 +8,5 @@ public class PhoneBook {
     public PhoneBook(Map mapPhoneBook) {
         this.mapPhoneBook = mapPhoneBook;
     }
+    public int add(){return 0;}
 }
