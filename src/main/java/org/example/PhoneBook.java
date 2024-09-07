@@ -23,7 +23,9 @@ public class PhoneBook {
         return res;
     }
 
-    public String findByNumber(){
-        return null;
+    public String findByNumber() {
+        String name = "";
+        name = (String) mapPhoneBook.get("55555555555");
+        return name;
     }
 }

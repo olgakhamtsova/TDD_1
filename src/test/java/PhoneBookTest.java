@@ -19,6 +19,7 @@ public class PhoneBookTest {
         int act = 1;
         assertEquals(exp, act);
     }
+
     @Test
     public void testFindByNumber() {
         map = new HashMap<>();
