@@ -1,10 +1,10 @@
-import org.example.PhoneBook;
-import org.junit.Test;
+package org.example;
+
+import org.junit.jupiter.api.Assertions;
+import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PhoneBookTest {
 
@@ -13,11 +13,10 @@ public class PhoneBookTest {
     @Test
     public void testAdd() {
         map = new HashMap<>();
-        map.put("55555555555", "Катя");
         PhoneBook book = new PhoneBook(map);
-        int exp = book.add();
+        int exp = book.add("55555555555", "Катя");
         int act = 1;
-        assertEquals(exp, act);
+        Assertions.assertEquals(exp, act);
     }
 
     @Test
@@ -25,8 +24,8 @@ public class PhoneBookTest {
         map = new HashMap<>();
         map.put("55555555555", "Катя");
         PhoneBook book = new PhoneBook(map);
-        String exp = book.findByNumber();
+        String exp = book.findByNumber("55555555555");
         String act = "Катя";
-        assertEquals(exp, act);
+        Assertions.assertEquals(exp, act);
     }
 }
